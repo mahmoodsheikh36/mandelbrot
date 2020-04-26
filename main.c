@@ -3,14 +3,14 @@
 
 /* read about mandelbrot set here: https://en.wikipedia.org/wiki/Mandelbrot_set */
 
-const int MANDELBROT_CHECK_ITERATIONS = 40;
+int iteration_per_pixel = 1;
 
 int mandelbrot_scale(double real_component, double imaginary_component) {
     double z_a = real_component;
     double z_b = imaginary_component;
 
     int i;
-    for (i = 0; i < MANDELBROT_CHECK_ITERATIONS; ++i) {
+    for (i = 0; i < iteration_per_pixel; ++i) {
         double tmp_z_a = z_a;
         z_a = z_a * z_a - z_b * z_b + real_component;
         z_b = 2 * tmp_z_a * z_b + imaginary_component;
@@ -33,7 +33,7 @@ void draw_mandelbrot(SDL_Renderer* renderer, int width, int height, double x_mov
             imaginary_component += y_mov;
             real_component += x_mov;
             double color_scale = scale(mandelbrot_scale(real_component, imaginary_component), 0,
-                                       MANDELBROT_CHECK_ITERATIONS - 1, 0, 255);
+                                       iteration_per_pixel - 1, 0, 255);
             SDL_SetRenderDrawColor(renderer, color_scale, color_scale, color_scale, 0x00);
             SDL_RenderDrawPoint(renderer, a, b);
         }
@@ -139,6 +139,7 @@ int main(int argc, char *argv[])
         SDL_GetWindowSize(window, &width, &height);
         draw_mandelbrot(renderer, width, height, x_mov, y_mov, zoom);
         SDL_RenderPresent(renderer);
+        iteration_per_pixel += 1;
     }
 
     SDL_DestroyRenderer(renderer);
