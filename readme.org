@@ -1,5 +1,6 @@
 * description
 a simple program written in C to draw the Mandelbrot set https://en.wikipedia.org/wiki/Mandelbrot_set
+it provides keys to zoom and move around the Mandelbrot drawing
 #+CAPTION: image of drawn Mandelbrot
 #+NAME:   fig:SED-HR4049
 [[./image.png]]
@@ -8,3 +9,14 @@ a simple program written in C to draw the Mandelbrot set https://en.wikipedia.or
 gcc main.c -lSDL2
 ./a.out
 #+END_SRC
+* keys to interact with Mandelbrot
+l -> go to right
+h -> go to left
+k -> go up
+j -> go down
+d -> go to right (big step)
+a -> go to left (big step)
+w -> go up (big step)
+s -> go down (big step)
+i -> zoom in
+o -> zoom out
