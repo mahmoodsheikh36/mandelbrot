@@ -1,5 +1,5 @@
 * description
-a simple program written in C to draw the Mandelbrot set https://en.wikipedia.org/wiki/Mandelbrot_set
+a simple interactive program written in C to draw the Mandelbrot set https://en.wikipedia.org/wiki/Mandelbrot_set
 
 it provides keys to zoom and move around the Mandelbrot drawing
 #+CAPTION: image of drawn Mandelbrot
