@@ -2,7 +2,7 @@
 a simple program written in C to draw the Mandelbrot set https://en.wikipedia.org/wiki/Mandelbrot_set
 #+CAPTION: image of drawn Mandelbrot
 #+NAME:   fig:SED-HR4049
-./image.png
+[[./image.png]]
 * how to run
 #+BEGIN_SRC bash
 gcc main.c -lSDL2
