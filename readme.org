@@ -12,12 +12,21 @@ gcc main.c -lSDL2
 #+END_SRC
 * keys to interact with Mandelbrot
 l -> go to right
+
 h -> go to left
+
 k -> go up
+
 j -> go down
+
 d -> go to right (big step)
+
 a -> go to left (big step)
+
 w -> go up (big step)
+
 s -> go down (big step)
+
 i -> zoom in
+
 o -> zoom out
